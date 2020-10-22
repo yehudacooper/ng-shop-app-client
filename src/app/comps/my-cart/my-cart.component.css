@@ -1,0 +1,27 @@
+h3{
+    margin:20px;
+    color:blueviolet;
+}
+
+.table{
+    margin:35px;
+    width: 1000px;
+}
+img{
+  max-height: 55px; 
+  max-width: 55px; 
+  
+}
+td,th{
+    text-align: center;
+}
+.button1{
+    background-color: blueviolet;
+    color: white;
+    
+    
+}
+.button{
+    text-align: center;
+    margin:20px;
+}

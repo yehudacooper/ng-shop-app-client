@@ -1,0 +1,27 @@
+<h1>our lighting-candles veriaty</h1>
+
+
+<div  class='flex-container'>
+<div  *ngFor='let item of list'>
+<!-- <div  *ngFor='let item of lightingCandleList' >    -->
+<div class="card">
+    <img src="../../../assets/images/candlestik1.jpg"  style="width:100%">
+    <!-- <img src={{item.ItemImgSrc}}  style="width:100%"> -->
+    
+    <h4>Candle-stick</h4>
+    
+    <p class="price">5236 NIS</p>
+    <!-- <p class="price">{{item.ItemPrice}}</p> -->
+    
+    <p>BOLERO SILVER CANDLESTICKS - LARGE</p>
+    <!-- <p>{{item.ItemDescription}}</p> -->
+    
+    <p>
+        <button routerLink='/singleitem' class="btn btn-secondary">SHOW DETAILS</button>
+        <!-- <button routerLink='/singleitem/{{item.id}}'>SHOW DETAILS</button> -->
+        
+    </p>
+</div>
+</div>
+</div>
+<!-- </div> -->

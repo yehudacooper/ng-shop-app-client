@@ -1,7 +1,25 @@
-<!-- <div [ngStyle]="{'min-height': clientHeight + 'px', 'margin-bottom': '-200px'}"> -->
+<div id="container1">
+    <div class="wrapper">
+        <app-header></app-header>
+        <router-outlet></router-outlet>
+    </div>
+     <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
+  <div class="elfsight-app-619db786-5e5a-40db-8706-76224222476e"></div>
+  <br><br><br><br><br><br><br>
+    <app-footer></app-footer>
+</div>
 
-<app-header></app-header>
-<router-outlet></router-outlet>
-<!-- <div style="height: 200px"></div>
-</div> -->
-<app-footer></app-footer>
+
+<!-- #container1{
+    position: relative;
+    min-height: 100vh;
+}
+.wrapper{
+    padding-bottom: 2.5rem; 
+}
+app-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+} -->

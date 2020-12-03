@@ -1,25 +1,55 @@
 <nav class="navbar navbar-expand-sm navbar-dark" data-id="web_navigation_bar">
-        <img src='../../../assets/images/silverstorelogo.jpg'>
-        <div class="collapse navbar-collapse" id="web_navigation_bar_collapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" routerLink='/home'>HOME <span class="sr-only">(current)</span></a>
-            </li>
-        
-           
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-toggle="dropdown"
-                aria-expanded="false">CATEGORIES</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown07XL">
-                <a class="dropdown-item" routerLink='/lightingsticks'>LIGHTING-CANDLES</a>
-                <a class="dropdown-item" routerLink='/chanukia'>CHANUKIA</a>
-                <a class="dropdown-item" routerLink='/kidush'>KIDDUSH</a>
-              </div>
-            </li>
-          </ul>
-        
+  <img src='../../../assets/images/silverstorelogo.jpg'>
+  <div class="collapse navbar-collapse" id="web_navigation_bar_collapse">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink='/home'>HOME
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink='/maps'>MAPS
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink='/contactus'>CONTACT-US
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-toggle="dropdown" aria-expanded="false">CATEGORIES</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown07XL">
+          <a class="dropdown-item" routerLink='/lightingsticks'>LIGHTING-CANDLES</a>
+          <a class="dropdown-item" routerLink='/chanukia'>CHANUKIA</a>
+          <a class="dropdown-item" routerLink='/kidush'>KIDDUSH</a>
         </div>
-        <div class="px-5">
-          <button class="btn btn-sm" data-id="nav_btn_login" routerLink='/signup'>LOG-IN</button>
-        </div>
-      </nav>
+      </li>
+
+
+
+    </ul>
+
+  </div>
+  <li class="nav-item active">
+    <a class="nav-link" routerLink='/shoppingcart'>
+      <i class='fa fa-shopping-cart' style='font-size:40px;color:white'></i>
+      <span class="sr-only">(current)</span>
+    </a>
+  </li>
+  <div class="px-1">
+    <button class="btn btn-sm" data-id="nav_btn_login" routerLink='/signin'>LOG-IN</button>
+  </div>
+  <div class="px-1">
+    <button class="btn btn-sm" data-id="nav_btn_login" routerLink='/signup'>SIGN-UP</button>
+  </div>
+  <div class="px-1" *ngIf="currentUser.role =='admin'">
+
+    <button class="btn btn-sm" data-id="nav_btn_login" routerLink='/adminpanel'>ADMIN</button>
+  </div>
+
+  <div class="px-1">
+    <button class="btn btn-sm" data-id="nav_btn_login" routerLink='/signup' (click)="logOut()">LOG-OUT</button>
+  </div>
+</nav>

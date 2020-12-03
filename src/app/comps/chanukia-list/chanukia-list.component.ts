@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SingleItem } from '../../models/singleitem';
 import { ItemsService } from '../../services/items.service';
-import { Subject } from 'rxjs';
+import { Subject, BehaviorSubject } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-chanukia-list',
@@ -10,20 +11,22 @@ import { Subject } from 'rxjs';
 })
 export class ChanukiaListComponent implements OnInit {
 
-  list = [1,2,3,4,5,6,7,8,9,10]
-  itemsList: Subject<Array<SingleItem>> = new Subject();
-  chanukiaList:Array<SingleItem> = [];
-  itemsList1:Array<SingleItem> = [];
-  constructor(private myItemService:ItemsService) { }
 
-  ngOnInit(): void {
-    this.itemsList1 = this.myItemService.itemsList;
-    this.itemsList.next(this.itemsList1);
-    this.itemsList.subscribe(data => this.chanukiaList = this.getAllChanukia() )
+  itemsList1: Array<SingleItem> = [];
+  constructor(public myItemService: ItemsService) {
+
+    this.myItemService.itemsList2.subscribe(data => {
+      if (data) this.itemsList1 = data.filter(item => item.sort == 'chanukia')
+    });
 
   }
-  getAllChanukia (){
-    return this.itemsList1.filter(item => item.ItemSort == 'chanukia');
+
+  ngOnInit(): void {
+
+  }
+
+  removeLocalStorage() {
+    localStorage.removeItem('singleItem');
   }
 
 }

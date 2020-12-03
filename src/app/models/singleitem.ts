@@ -1,10 +1,12 @@
-export interface SingleItem {
+export class SingleItem {
 
-    ItemId: string;
-    ItemSort: string;
-    ItemHeight: string;
-    ItemPrice: string;
-    ItemImgSrc: string;
-    ItemMaterial: string;
-    ItemDescription: string;
+    id: string;
+    sort: string;
+    height: string;
+    price: string;
+    imgSrc: string;
+    material: string;
+    description: string;
+    bigImgSrc:string;
+    qnty?:string;
   }

@@ -1,2 +1,33 @@
 
 
+/* app-footer {
+    clear: both;
+    position: relative;
+    bottom:0px;
+    height: 200px;
+    margin-top: -200px;
+} */
+
+/* .map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container iframe{
+    left:0;
+    top:0;} */
+
+     #container1{
+        position: relative;
+        min-height: 100vh;
+    }
+    .wrapper{
+        padding-bottom: 2.5rem; 
+    }
+    app-footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+    } 

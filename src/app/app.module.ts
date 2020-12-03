@@ -18,6 +18,12 @@ import { PageNotFoundComponent } from './comps/page-not-found/page-not-found.com
 import { SigninComponent } from './comps/signin/signin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { KeepcontactComponent } from './comps/keepcontact/keepcontact.component';
+import { SignupComponent } from './comps/signup/signup.component';
+import { AdditemComponent } from './comps/additem/additem.component';
+import { AdminpanelComponent } from './comps/adminpanel/adminpanel.component';
+import { EdititemComponent } from './comps/edititem/edititem.component';
+import { MapComponent } from './comps/map/map.component';
+import { ContactusComponent } from './comps/contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +41,12 @@ import { KeepcontactComponent } from './comps/keepcontact/keepcontact.component'
     PageNotFoundComponent,
     SigninComponent,
     KeepcontactComponent,
+    SignupComponent,
+    AdditemComponent,
+    AdminpanelComponent,
+    EdititemComponent,
+    MapComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,

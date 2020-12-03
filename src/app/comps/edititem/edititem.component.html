@@ -1,0 +1,41 @@
+<body class="text-center">
+  <form class="form-signin" [formGroup]="addItemForm" (ngSubmit)="onSubmit(addItemForm.value,itemId)">
+    <h1 class="h3 mb-3 font-weight-normal">Add new item</h1>
+    <label for="text">Item sort:</label>
+    <input type="text" id="sort" class="form-control" [(ngModel)]="singleItem.sort" autofocus formControlName="sort">
+
+    <br>
+    <label for="text">Item description:</label>
+    <input type="text" id="description" class="form-control" [(ngModel)]="singleItem.description" formControlName="description">
+
+    <br>
+
+    <label for="text">Item price:</label>
+    <input type="text" id="price" class="form-control" [(ngModel)]="singleItem.price" formControlName="price">
+
+    <br>
+
+    <label for="text">Item material:</label>
+    <input type="text" id="material" class="form-control" [(ngModel)]="singleItem.material" formControlName="material">
+
+    <br>
+
+    <label for="text">Item height:</label>
+    <input type="text" id="height" class="form-control" [(ngModel)]="singleItem.height" formControlName="height">
+
+    <br>
+
+    <label for="text">Item image:</label>
+    <input type="text" id="image" class="form-control" [(ngModel)]="singleItem.imgSrc" formControlName="imgSrc">
+
+    <br>
+
+    <label for="text">Item big image:</label>
+    <input type="text" id="bigImg" class="form-control" [(ngModel)]="singleItem.bigImgSrc" formControlName="bigImgSrc">
+
+    <br>
+
+    <button class="btn btn-lg btn-secondary btn-block" type="submit" (click)="onSubmit(addItemForm.value,itemId)" routerLink='/adminpanel'
+      [disabled]="!addItemForm.valid">EDIT ITEM</button>
+  </form>
+</body>

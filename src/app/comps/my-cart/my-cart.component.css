@@ -25,3 +25,12 @@ td,th{
     text-align: center;
     margin:20px;
 }
+.fix-table-height{
+    min-width:620px;
+}
+
+#total{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size:1.3rem;
+    margin-left: 800px;
+}

@@ -1,0 +1,41 @@
+<body class="text-center">
+  <form class="form-signin" [formGroup]="addItemForm" (ngSubmit)="onSubmit(addItemForm.value)">
+    <h1 class="h3 mb-3 font-weight-normal">Add new item</h1>
+    <label for="text">Item sort:</label>
+    <input type="text" id="sort" class="form-control" placeholder="Enter item sort" autofocus formControlName="sort">
+    <span *ngIf="!addItemForm.get('sort').valid && addItemForm.get('sort').touched" class="help-block text-danger" class='danger'>please enter item sort!</span>
+    <br>
+    <label for="text">Item description:</label>
+    <input type="text" id="description" class="form-control" placeholder="Enter item description" formControlName="description">
+    <span *ngIf="!addItemForm.get('description').valid && addItemForm.get('description').touched" class="help-block text-danger">please enter item description!</span>
+    <br>
+
+    <label for="text">Item price:</label>
+    <input type="text" id="price" class="form-control" placeholder="Enter item price" formControlName="price">
+    <span *ngIf="!addItemForm.get('price').valid && addItemForm.get('price').touched" class="help-block text-danger">please enter item price!</span>
+    <br>
+
+    <label for="text">Item material:</label>
+    <input type="text" id="material" class="form-control" placeholder="Enter item material" formControlName="material">
+    <span *ngIf="!addItemForm.get('material').valid && addItemForm.get('material').touched" class="help-block text-danger">please enter item material!</span>
+    <br>
+
+    <label for="text">Item height:</label>
+    <input type="text" id="height" class="form-control" placeholder="Enter item height" formControlName="height">
+    <span *ngIf="!addItemForm.get('height').valid && addItemForm.get('height').touched" class="help-block text-danger">please enter item height!</span>
+    <br>
+
+    <label for="text">Item image:</label>
+    <input type="text" id="image" class="form-control" placeholder="Enter item img source" formControlName="imgSrc">
+    <span *ngIf="!addItemForm.get('imgSrc').valid && addItemForm.get('imgSrc').touched" class="help-block text-danger">please enter item img source!</span>
+    <br>
+
+    <label for="text">Item big image:</label>
+    <input type="text" id="bigImg" class="form-control" placeholder="Enter item big img source" formControlName="bigImgSrc">
+    <span *ngIf="!addItemForm.get('bigImgSrc').valid && addItemForm.get('bigImgSrc').touched" class="help-block text-danger">please enter item big img source!</span>
+    <br>
+
+    <button class="btn btn-lg btn-secondary btn-block" type="submit" (click)="onSubmit(addItemForm.value)" routerLink='/adminpanel'
+      [disabled]="!addItemForm.valid">ADD NEW ITEM</button>
+  </form>
+</body>

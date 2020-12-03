@@ -11,6 +11,12 @@ import { KidushComponent } from './comps/kidush/kidush.component';
 import { PageNotFoundComponent } from './comps/page-not-found/page-not-found.component';
 import { SigninComponent } from './comps/signin/signin.component';
 import { KeepcontactComponent } from './comps/keepcontact/keepcontact.component';
+import { SignupComponent } from './comps/signup/signup.component';
+import { AdditemComponent } from './comps/additem/additem.component';
+import { AdminpanelComponent } from './comps/adminpanel/adminpanel.component';
+import { EdititemComponent } from './comps/edititem/edititem.component';
+import { MapComponent } from './comps/map/map.component';
+import { ContactusComponent } from './comps/contactus/contactus.component';
 
 
 const routes: Routes = [
@@ -25,8 +31,19 @@ const routes: Routes = [
   {path:'chanukia',component:ChanukiaListComponent},
   {path:'kidush',component:KidushComponent},
   {path:'pathnotfind',component:PageNotFoundComponent},
-  {path:'signup',component:SigninComponent},
+  {path:'signin',component:SigninComponent},
+  {path:'signup',component:SignupComponent},
   {path:'keepcontact',component:KeepcontactComponent},
+  {path:'additem',component:AdditemComponent},
+  {path:'adminpanel',component:AdminpanelComponent},
+  {path:'edititem/:id',component:EdititemComponent},
+  {path:'maps',component:MapComponent},
+  {path:'contactus',component:ContactusComponent},
+  
+  
+  
+  
+  
 
 
 

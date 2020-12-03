@@ -11,20 +11,21 @@ import { Subject } from 'rxjs';
 export class KidushComponent implements OnInit {
 
 
-  list = [1,2,3,4,5,6,7,8,9,10]
-  itemsList: Subject<Array<SingleItem>> = new Subject();
-  kidushList:Array<SingleItem> = [];
-  itemsList1:Array<SingleItem> = [];
-  constructor(private myItemService:ItemsService) { }
+  itemsList1: Array<SingleItem> = [];
+  constructor(public myItemService: ItemsService) {
 
-  ngOnInit(): void {
-    this.itemsList1 = this.myItemService.itemsList;
-    this.itemsList.next(this.itemsList1);
-    this.itemsList.subscribe(data => this.kidushList = this.getAllKiddush() )
+    this.myItemService.itemsList2.subscribe(data => {
+      if (data) this.itemsList1 = data.filter(item => item.sort == 'kiddush')
+    });
 
   }
-  getAllKiddush (){
-    return this.itemsList1.filter(item => item.ItemSort == 'kiddush');
+
+  ngOnInit(): void {
+
+  }
+
+  removeLocalStorage() {
+    localStorage.removeItem('singleItem');
   }
 
 }

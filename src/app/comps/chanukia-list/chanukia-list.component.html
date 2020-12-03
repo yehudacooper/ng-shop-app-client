@@ -1,26 +1,21 @@
 <h1>our chanukia veriaty</h1>
 
 
-<div  class='flex-container'>
-<div  *ngFor='let item of list'>
-<!-- <div  *ngFor='let item of chanukiaList' >    -->
-    
-<div class="card">
-    <img src="../../../assets/images/chanukia1.jpg" style="width:100%">
-    <!-- <img src={{item.ItemImgSrc}}  style="width:100%"> -->
-    
-    <h4>Chanukia</h4>
-    <p class="price">5236 NIS</p>
-    <!-- <p class="price">{{item.ItemPrice}}</p> -->
-    
-    <p>BOLERO SILVER KIDUSH CUP - LARGE</p>
-    <!-- <p>{{item.ItemDescription}}</p> -->
-    
-    <p>
-        <button routerLink='/singleitem' class="btn btn-secondary">SHOW DETAILS</button>
-        <!-- <button routerLink='/singleitem/{{item.id}}'>SHOW DETAILS</button> -->
-        
-    </p>
-</div>
-</div>
+<div class='flex-container'>
+    <div *ngFor='let item of itemsList1'>
+
+        <div class="card">
+            <img src={{item.imgSrc}} style="width:100%">
+
+            <h4>Chanukia</h4>
+            <p class="price"> {{item.price|currency:'ILS'}}</p>
+
+            <p>{{item.description}}</p>
+
+            <p>
+                <button (click)="removeLocalStorage()" routerLink='/singleitem/{{item.id}}'>SHOW DETAILS</button>
+
+            </p>
+        </div>
+    </div>
 </div>

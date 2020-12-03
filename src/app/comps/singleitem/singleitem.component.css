@@ -1,12 +1,17 @@
 img {
     vertical-align: middle;
     border-style: none;
-    width: 50%;
+    width: 40%;
     height: 550px;
     margin: 70px;
     margin-top: 0px;
     
 }
+img:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
 
 .flex-container {
     display: flex;
@@ -15,12 +20,12 @@ img {
   }
 
 .price{
-    font-size: 50px;
+    font-size: 40px;
     color: blueviolet;
 } 
 label,span{
-    font-size:30px;
-    margin-top:20px;
+    font-size:20px;
+    margin-top:10px;
 } 
 button{
     background-color: blueviolet;

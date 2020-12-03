@@ -10,21 +10,21 @@ import { Subject } from 'rxjs';
 })
 export class LightingCandlesListComponent implements OnInit {
 
+  itemsList1: Array<SingleItem> = [];
+  constructor(public myItemService: ItemsService) {
 
-  list = [1,2,3,4,5,6,7,8,9,10]
-  itemsList: Subject<Array<SingleItem>> = new Subject();
-  lightingCandleList:Array<SingleItem> = [];
-  itemsList1:Array<SingleItem> = [];
-  constructor(private myItemService:ItemsService) { }
-
-  ngOnInit(): void {
-    this.itemsList1 = this.myItemService.itemsList;
-    this.itemsList.next(this.itemsList1);
-    this.itemsList.subscribe(data => this.lightingCandleList = this.getAllKiddush() )
+    this.myItemService.itemsList2.subscribe(data => {
+      if (data) this.itemsList1 = data.filter(item => item.sort == 'kandlestick')
+    });
 
   }
-  getAllKiddush (){
-    return this.itemsList1.filter(item => item.ItemSort == 'lightingstick');
+
+  ngOnInit(): void {
+
+  }
+
+  removeLocalStorage() {
+    localStorage.removeItem('singleItem');
   }
 
 }

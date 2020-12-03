@@ -1,0 +1,24 @@
+<h1>our chanukia veriaty</h1>
+<button id="addbtn" routerLink='/additem'>ADD ITEM</button>
+
+
+<div class='flex-container'>
+    <div *ngFor='let item of itemsList'>
+
+        <div class="card">
+            <img src={{item.imgSrc}} style="width:100%">
+
+            <h4>{{item.sort}}</h4>
+            <p class="price"> {{item.price|currency:'ILS'}}</p>
+
+            <p>{{item.description}}</p>
+
+            <p>
+                <button id="editbtn" routerLink='/edititem/{{item.id}}'>EDIT</button>
+                <button id="deletebtn" class="btn btn-default" data-toggle="confirmation" (click)="deleteItem(item.id)">DELETE</button>
+            </p>
+        </div>
+    </div>
+
+
+</div>
